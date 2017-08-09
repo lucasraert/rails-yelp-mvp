@@ -3,7 +3,7 @@
     <h1>Vegan restaurants 🌿</h1>
     <ul class="list-unstyled">
       <% @restaurants.each do |resto| %>
-        <div class="restaurant">
+        <div class="card">
         <li>
         <% if resto.category == "french" %>
             🇫🇷
@@ -19,15 +19,12 @@
         <li><p>📍 <%= resto.address %></p></li>
         <li><p>📞 <%= resto.phone_number %></p></li>
         <li>
-        <%= link_to new_restaurant_review_path(resto) do %>
-          <i class="fa fa-commenting-o" aria-hidden="true"></i>
-          <% end %>
+        <%= link_to "Add review", new_restaurant_review_path(resto), class: "button" %>
         </li>
         <hr>
         </div>
       <% end %>
     </ul>
   </div>
-  <%= link_to "Add a new place", new_restaurant_path, class: "btn btn-danger" %>
 </div>
 

@@ -2,24 +2,49 @@
 .container {
   display: flex;
   justify-content: space-around;
-  align-items: center;
 }
 
 .center {
   margin-top: 40px;
 }
 
-.restaurant {
+.card {
   margin: 20px 0;
 }
 
-.restaurant p {
+.card p {
   font-size: 14px;
   line-height: 10px;
   margin: 15px 0;
   color: #888888;
 }
 
-.center a {
-  color: #444444;
+.button {
+  border-radius: 5px;
+  border: 1px solid #999;
+  padding: 3px 5px;
+  opacity: 0.8;
+
 }
+
+a.button {
+  color: #999;
+  font-size: 13px;
+  opacity: 0.8;
+    &:hover {
+  transform: scaleX(2);
+  transition: transform 500ms ease;
+  }
+}
+
+
+a {
+  color: #444;
+}
+
+a:hover {
+  color: #444;
+  opacity: 0.7;
+  text-decoration: none;
+}
+

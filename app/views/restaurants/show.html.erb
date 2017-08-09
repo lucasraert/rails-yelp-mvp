@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="center">
+    <h1>
+    <% if @restaurant.category == "french" %>
+            🇫🇷
+            <% elsif @restaurant.category == "belgian" %>
+            🇧🇪
+            <% elsif @restaurant.category == "italian" %>
+            🇮🇹
+            <% elsif @restaurant.category == "japanese" %>
+            🇯🇵
+            <% end %>
+    <%= @restaurant.name %>
+    </h1>
+    <ul class="list-unstyled">
+        <div class="restaurant">
+        <li><p>📍 <%= @restaurant.address %></p></li>
+        <li><p>📞 <%= @restaurant.phone_number %></p></li>
+        <hr>
+        </div>
+    </ul>
+    <ul class="list-unstyled">
+      <div class="restaurant">
+        <% @restaurant.reviews.each do |review| %>
+          <li>
+          <% review.rating.times do %>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <% end %>
+          <% stars = 5 - review.rating %>
+          <% stars.times do %>
+          <i class="fa fa-star-o" aria-hidden="true"> </i>
+          <% end %>
+          <q id="content"><em><%= review.content %></em></q></li>
+          <hr>
+        <% end %>
+      </div>
+    </ul>
+  </div>
+</div>
+
