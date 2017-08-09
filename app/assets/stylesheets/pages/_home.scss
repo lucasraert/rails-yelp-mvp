@@ -1,1 +1,25 @@
 // Specific CSS for your home-page
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.center {
+  margin-top: 40px;
+}
+
+.restaurant {
+  margin: 20px 0;
+}
+
+.restaurant p {
+  font-size: 14px;
+  line-height: 10px;
+  margin: 15px 0;
+  color: #888888;
+}
+
+.center a {
+  color: #444444;
+}

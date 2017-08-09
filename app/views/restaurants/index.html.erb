@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="center">
+    <h1>Vegan restaurants 🌿</h1>
+    <ul class="list-unstyled">
+      <% @restaurants.each do |resto| %>
+        <div class="restaurant">
+        <li>
+        <% if resto.category == "french" %>
+            🇫🇷
+            <% elsif resto.category == "belgian" %>
+            🇧🇪
+            <% elsif resto.category == "italian" %>
+            🇮🇹
+            <% elsif resto.category == "japanese" %>
+            🇯🇵
+            <% end %>
+          <strong><%=link_to resto.name, restaurant_path(resto)%></strong>
+        </li>
+        <li><p>📍 <%= resto.address %></p></li>
+        <li><p>📞 <%= resto.phone_number %></p></li>
+        <li>
+        <%= link_to new_restaurant_review_path(resto) do %>
+          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+          <% end %>
+        </li>
+        <hr>
+        </div>
+      <% end %>
+    </ul>
+  </div>
+  <%= link_to "Add a new place", new_restaurant_path, class: "btn btn-danger" %>
+</div>
+

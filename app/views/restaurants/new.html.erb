@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="center">
+    <h3>Add information</h3>
+    <ul class="list-unstyled">
+        <div class="restaurant">
+        <%= simple_form_for(@restaurant) do |f| %>
+        <li>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        </li>
+        <li>
+        <%= f.label :address %>
+        <%= f.text_field :address %>
+        </li>
+        <li>
+        <%= f.label :phone_number%>
+        <%= f.text_field :phone_number%>
+        </li>
+        <li>
+        <%= f.input :category, collection: Restaurant::CATEGORIES %>
+        </li>
+        <li>
+        <%= f.submit %>
+        </li>
+        <% end %>
+      </div>
+    </ul>
+  </div>
+</div>
+

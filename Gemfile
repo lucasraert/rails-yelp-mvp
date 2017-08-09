@@ -39,6 +39,8 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 # Use autoprefixer rails
 gem 'autoprefixer-rails'
+# Use faker
+gem 'faker', '~> 1.8', '>= 1.8.4'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

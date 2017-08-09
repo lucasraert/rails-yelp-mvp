@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="center">
+    <h3>Add information</h3>
+    <ul class="list-unstyled">
+      <div class="restaurant">
+        <%= simple_form_for [@restaurant, @review] do |f| %>
+          <%= f.input :content %>
+          <%= f.input :rating, collection: (0..5) %>
+          <%= f.submit "add a review", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </ul>
+  </div>
+</div>
